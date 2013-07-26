@@ -1,0 +1,179 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+    	<title>jQuery UI Tabs - Default functionality</title>
+ 	 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ 	 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ 	 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+ 	 <link rel="stylesheet" href="/resources/demos/style.css" />
+  	
+       <script>
+  		$(function() {
+    		$( "#tabs" ).tabs();
+       });
+       </script>
+
+</head>
+
+
+     <div id="tabs">
+  	<ul>
+   	    <li><a href="#tabs-1">Student Registration</a></li>
+    	    <li><a href="#tabs-2">Student Medical Report</a></li>
+  	</ul>
+
+<head>
+
+	
+	<style>
+
+		body {
+  		background-color:#d0e4ab;
+	}
+
+		h1 {
+  		text-align:center;
+	}
+
+	</style>
+</head>
+
+<div id="tabs-1">
+  <script>
+   function validateForm()  {
+
+ var x=document.forms["myForm"]["firstname"].value;
+
+  if (x==null || x=="")
+   {
+	alert("First name should be filled");
+	return false;
+   }
+
+ var x=document.forms["myForm"]["lastname"].value;
+
+  if (x==null || x=="")
+   {
+	alert("last name should be filled");
+	return false;
+   }
+
+ var x=document.forms["myForm"]["emailid"].value;
+
+  if (x==null || x=="")
+   {
+	alert("e-mail should be filled");
+	return false;
+   }
+ var x=document.forms["myForm"]["emailid"].value;
+	
+        var atpos=x.indexOf("@");
+  	var dotpos=x.lastIndexOf(".");
+   if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+   {
+        alert("Not a valid e-mail address");
+        return false;
+   }
+ var x=document.forms["myForm"]["height"].value;
+
+  if (x==null || x=="")
+   {
+	alert("Height should be filled");
+	return false;
+   }
+
+  if (x==""||isNaN(x))
+   {
+	alert("Height should be a Numeric Value");
+	return false;
+   }
+
+ var x=document.forms["myForm"]["weight"].value;
+
+  if (x==null || x=="")
+   {
+	alert("Weight should be filled");
+	return false;
+   }
+ 
+  if (x==""||isNaN(x))
+   {
+	alert("Weight should be a Numeric value");
+	return false;
+   }
+}
+
+</script>
+
+
+<body>
+
+  
+  <h1>  Welcome to Student Registration </h1>
+
+        <form name="myForm" action="http://www.Indian Navy.org"  method="post">
+
+	First name: <input type="text" name="firstname"><br>
+
+	Last name: <input type="text" name="lastname"><br>
+
+	Email-id: <input type="text" name="emailid"><br>
+	
+	Height: <input type="text" name="height"><br>
+	
+	Weight: <input type="text" name="weight"><br>
+
+	<input type="submit" value="Submit" onclick="return validateForm()">
+</body>
+<div>
+
+<div id="tabs-2">
+  <script>
+    
+     function validateMed()  {
+
+	var x=document.forms["medForm"]["fullname"].value;
+		if(x==null || x=="")
+		{
+		  alert("Mention your Full Name");
+		  return false;
+		}
+	var x=document.forms["medForm"]["bloodgroup"].value;
+		if(x==null || x=="")
+		{
+		  alert("Mention your Blood Group");
+		  return false;
+		}
+	var x=document.forms["medForm"]["bloodpressure"].value;
+		if(x==null || x=="")
+		{
+		  alert("Mention your current Blood Pressure");
+		  return false;
+		}
+
+		if(x=="" || is NaN(x))
+		{
+		  alert("Blood Pressure must be a Numeric value");
+		  return false;
+		}
+     }
+ 
+  </script>
+
+
+  <body>
+
+   <h1> Welcome to Student Medical Info </h1>
+	<form name="medForm"> action="http://www.Indian Navy.org" method="post">
+	Full name: <input type="text" name="fullname"><br>
+	Blood Group: <input type="text" name="bloodgroup"><br>
+	Blood Pressure: <input type="text" name="bloodpressure"><br>
+	<input type="checkbox" name="injection" value="vaccination">Had my Vaccination<br>
+	<input type="submit" value="Submit" onclick="return validateMed()">
+
+  </body>
+	
+
+
+</div>
+</html>
